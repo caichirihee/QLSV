@@ -1,0 +1,114 @@
+.button_login {
+    -fx-background-color: #0c8cc9;
+}
+
+.button_login:hover {
+    -fx-background-color: #2aa7eb;
+    -fx-cursor: hand;
+}
+
+.button_cancel {
+    -fx-text-fill: #151414;
+}
+
+.button_cancel:hover {
+    -fx-background-color: #6e7d85;
+    -fx-text-fill: #fafafa;
+    -fx-cursor: hand;
+}
+
+.button1 {
+    -fx-background-color:  #55ebf2;
+    -fx-border-color: #fffcfc;
+    -fx-border-width: 4px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 8px;
+}
+
+.button1:hover {
+    -fx-background-color: #9df5f0;
+    -fx-z-index: 2;
+    -fx-cursor: hand;
+}
+
+.btn_home{
+    -fx-padding: 0px 0px 15px 0px;
+}
+
+.btn_back {
+    -fx-border-color: #fafafa;
+    -fx-border-radius: 4px;
+    -fx-border-width: 3px;
+    -fx-cursor: hand;
+    -fx-background-color: #ffffff;
+}
+
+.tf_search {
+    -fx-background-radius: 10px;
+    -fx-text-fill: #474545;
+}
+
+.vbox_student {
+    -fx-text-fill: #fafafa;
+    -fx-background-radius: 8px;
+    -fx-background-color: #4DD0E1;
+}
+
+
+/*TableView Student*/
+
+.table-view {
+    -fx-background-radius: 8;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color: #4DD0E1;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+.table-view .cell{
+    -fx-background-color: #d8fffa;
+    -fx-border-color: #ffffff;
+    -fx-text-fill: #020202;
+    -fx-alignment: CENTER;
+}
+
+.table-view .cell:hover {
+    -fx-background-color: yellow;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #ff0000;
+}
+
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive( #1ee0f1,80%);
+
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #1ee0f1,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}

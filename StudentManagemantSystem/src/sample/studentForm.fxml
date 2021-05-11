@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#Key_Handle_Back" prefHeight="800.0" prefWidth="1300.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StudentController">
+   <children>
+      <BorderPane layoutY="-3.0" prefHeight="800.0" prefWidth="1106.0" stylesheets="@../../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane blendMode="SRC_ATOP" prefHeight="136.0" prefWidth="788.0" style="-fx-background-color: #25f6e7;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="319.0" layoutY="36.0" text="Students Management">
+                     <font>
+                        <Font name="Tahoma Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backButton" layoutX="21.0" layoutY="39.0" mnemonicParsing="false" onAction="#backActionForm" prefHeight="43.0" prefWidth="86.0" styleClass="btn_back" stylesheets="@../../css/style.css" text="&lt;Back&gt;">
+                     <font>
+                        <Font name="Tahoma Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="searchStudentButton" alignment="CENTER" layoutX="1022.0" layoutY="42.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#searchStudent" prefHeight="33.0" prefWidth="219.0" promptText="Tìm kiếm..." styleClass="tf_search" stylesheets="@../../css/style.css">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></TextField>
+                  <Label alignment="CENTER" layoutX="917.0" layoutY="43.0" lineSpacing="2.0" prefHeight="38.0" prefWidth="94.0" text="Tìm kiếm:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tahoma Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" />
+               </BorderPane.margin>
+            </Pane>
+         </top>
+         <right>
+            <VBox focusTraversable="true" prefHeight="654.0" prefWidth="333.0" style="-fx-background-color: #25f6e7;" styleClass="vbox_student" stylesheets="@../../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="417.0" text="ToolBox" textFill="#1e1a1a">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="80.0" />
+                     </VBox.margin></Label>
+                  <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" depthTest="ENABLE" mnemonicParsing="false" onAction="#getStudentForm" prefHeight="14.0" prefWidth="233.0" style="-fx-background-color: #25f6e7;" styleClass="button1" stylesheets="@../../css/style.css" text="Add" textAlignment="CENTER" textFill="#1e1a1a" underline="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="60.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="30.0" prefWidth="233.0" style="-fx-background-color: #25f6e7;" styleClass="button1" stylesheets="@../../css/style.css" text="Delete" textAlignment="CENTER" textFill="#1e1a1a" underline="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="60.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#editStudent" prefHeight="0.0" prefWidth="233.0" style="-fx-background-color: #25f6e7;" styleClass="button1" stylesheets="@../../css/style.css" text="Edit" textAlignment="CENTER" textFill="#1e1a1a" underline="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="60.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="reloadButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#refreshTableView" prefHeight="0.0" prefWidth="233.0" style="-fx-background-color: #25f6e7;" styleClass="button1" stylesheets="@../../css/style.css" text="Reload" textAlignment="CENTER" textFill="#1e1a1a" underline="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="60.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </right>
+         <center>
+            <AnchorPane prefHeight="598.0" prefWidth="548.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="studentTableView" layoutX="4.0" prefHeight="651.0" prefWidth="933.0" style="-fx-cursor: hand;" stylesheets="@../../css/style.css">
+                    <columns>
+                      <TableColumn fx:id="idTableColumn" prefWidth="40.0" style="-fx-alignment: center;" text="ID" />
+                      <TableColumn fx:id="lastnameTableColumn" prefWidth="118.0" style="-fx-alignment: center;" text="Last Name" />
+                        <TableColumn fx:id="firstnameTableColumn" prefWidth="77.0" style="-fx-alignment: center;" text="First Name" />
+                        <TableColumn fx:id="dobTableColumn" prefWidth="91.0" style="-fx-alignment: center;" text="D.OB" />
+                        <TableColumn fx:id="sexTableColumn" prefWidth="51.0" style="-fx-alignment: center;" text="Sex" />
+                        <TableColumn fx:id="emailTableColumn" prefWidth="172.0" style="-fx-alignment: center;" text="Email" />
+                        <TableColumn fx:id="addressTableColumn" prefWidth="138.0" style="-fx-alignment: center;" text="Address" />
+                        <TableColumn fx:id="phoneTableColumn" minWidth="1.0" prefWidth="118.0" style="-fx-alignment: center;" text="Phone Number" />
+                        <TableColumn fx:id="classTableColumn" minWidth="1.0" prefWidth="124.0" style="-fx-alignment: center;" text="Class" />
+                    </columns>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </BorderPane.margin>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
